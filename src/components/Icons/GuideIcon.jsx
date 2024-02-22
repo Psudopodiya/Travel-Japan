@@ -6,9 +6,9 @@ const GuideIcon = ({ name, designation }) => {
         <div>
             <div className="flex gap-2">
                 <Avatar sx={{ height: '70px', width: '70px' }} />
-                <div className="font-OpenSans flex-row space-y-1 text-sm text-black">
+                <div className="font-ZCOOL flex-row space-y-1 text-sm text-black">
                     <div>
-                        <div className="font-Enriqueta">{name}</div>
+                        <div className="font-bold">{name}</div>
                         <div className="text-red-500">{designation}</div>
                     </div>
                     <div className="text-xs">

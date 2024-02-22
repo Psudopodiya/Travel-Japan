@@ -5,6 +5,7 @@ export default {
             fontFamily: {
                 Enriqueta: ['Enriqueta', 'serif'],
                 OpenSans: ['Open Sans', 'sans-serif'],
+                ZCOOL: ['ZCOOL XiaoWei', 'sans-serif'],
             },
         },
     },

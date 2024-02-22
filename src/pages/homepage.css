@@ -5,3 +5,14 @@
     height: 100vh;
     position: relative;
 }
+
+.homepage-planner {
+}
+
+.homepage-tours {
+    background-image: url('../assets/images/japanNight.jpg');
+    background-position: center;
+    background-size: cover;
+    height: fit-content;
+    position: relative;
+}
