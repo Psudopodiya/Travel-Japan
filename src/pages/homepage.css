@@ -7,6 +7,11 @@
 }
 
 .homepage-planner {
+    background-image: url('../assets/images/cherryBlossom.jpeg');
+    background-position: center;
+    background-size: cover;
+    height: fit-content;
+    position: relative;
 }
 
 .homepage-tours {

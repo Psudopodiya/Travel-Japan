@@ -1,8 +1,8 @@
 import './homepage.css';
 
-import pathMap from '../assets/map.svg';
-import path from '../assets/path.svg';
-import react from '../assets/react.svg';
+import PlaceIcon from '@mui/icons-material/Place';
+
+import pathMap from '../assets/pathMap.svg';
 import GuideIcon from '../components/Icons/GuideIcon';
 import Navbar from '../components/Navbar';
 import { WeatherComponent } from '../components/UI/WeatherComponent';
@@ -28,18 +28,47 @@ const HomePage = () => {
                 <WeatherComponent />
             </div>
 
-            <div className="w-full px-40 pt-12 font-ZCOOL text-xl">
+            <div className="homepage-planner w-full px-40 pt-12 font-ZCOOL text-xl">
                 <div>CHOOSE YOUR UNFORGETABLE JOURNEY</div>
                 <div className="mt-7 flex">
                     <div className="w-2/5">
-                        <div>
-                            <img src={path} alt="map" />
-                        </div>
-                        <div>
-                            <img src={react} alt="map" />
-                        </div>
-                        <div>
+                        <div className="relative inline-block">
                             <img src={pathMap} alt="map" />
+                            <button
+                                className="absolute flex"
+                                style={{ top: '20px', left: '45px' }}
+                            >
+                                <PlaceIcon />
+                                <div className="text-sm">Tokyo</div>
+                            </button>
+                            <button
+                                className="absolute flex"
+                                style={{ top: '120px', left: '260px' }}
+                            >
+                                <PlaceIcon />
+                                <div className="text-sm">Okohoma</div>
+                            </button>
+                            <button
+                                className="absolute flex"
+                                style={{ top: '220px', left: '140px' }}
+                            >
+                                <PlaceIcon />
+                                <div className="text-sm">Kioto</div>
+                            </button>
+                            <button
+                                className="absolute flex"
+                                style={{ top: '340px', left: '40px' }}
+                            >
+                                <PlaceIcon />
+                                <div className="text-sm">Sapporo</div>
+                            </button>
+                            <button
+                                className="absolute flex"
+                                style={{ left: '155px', top: '430px' }}
+                            >
+                                <PlaceIcon />
+                                <div className="text-sm">Osaka</div>
+                            </button>
                         </div>
 
                         <div className="mt-5">OUR GUIDES</div>
@@ -74,9 +103,19 @@ const HomePage = () => {
                             Learn More
                         </div>
 
-                        <div>VIDEO BOX</div>
+                        <div className="h-72 rounded-sm py-5 shadow-sm">
+                            <iframe
+                                className="h-72 w-full"
+                                src="https://www.youtube.com/embed/F0AT_7uVbeo"
+                                title="YouTube video player"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
+                            >
+                                Your browser does not support this link
+                            </iframe>
+                        </div>
 
-                        <div className="mt-4 max-w-fit border-[1px] border-transparent transition duration-700 ease-in-out hover:border-[1px] hover:border-b-red-600">
+                        <div className="mt-10 max-w-fit border-[1px] border-transparent transition duration-700 ease-in-out hover:border-[1px] hover:border-b-red-600">
                             Book Trip
                         </div>
                     </div>
