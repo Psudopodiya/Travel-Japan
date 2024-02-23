@@ -122,12 +122,12 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <div className="homepage-tours my-10 flex h-fit w-full  flex-col items-center py-5 font-ZCOOL  text-white">
+            <div className="homepage-tours my-10 flex h-fit w-full  flex-col items-center  font-ZCOOL  text-white">
                 <div className="mt-6">Unforgetable</div>
                 <div className="mt-5 text-6xl tracking-[.7em] text-red-600">
                     JAPAN
                 </div>
-                <div className="mt-5 ">
+                <div className="mt-5 text-wrap">
                     Tokyo|Okohoma|Kioto|Sapporo|Osaka|Fukuokai
                 </div>
                 <div className="mt-5 max-w-fit border-[1px] border-transparent transition duration-700 ease-in-out hover:border-[1px] hover:border-b-red-600">
@@ -136,8 +136,8 @@ const HomePage = () => {
 
                 {dates.map((date, index) => {
                     return (
-                        <div key={index} className="mt-8 flex">
-                            <div className="mr-2 text-6xl">{date}</div>
+                        <div key={index} className="mt-8 flex justify-evenly">
+                            <div className="mr-3 text-6xl">{date}</div>
                             <div>
                                 <div className="mt-1">April</div>
                                 <div className="mt-1">{location[index]}</div>
