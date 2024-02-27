@@ -2,7 +2,6 @@ import './homepage.css';
 
 import { ArrowForward } from '@mui/icons-material';
 
-import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import CardList from '../components/UI/CardList';
 
@@ -12,14 +11,6 @@ const HomePage = () => {
         'Best Tour Guide',
         'Easy Booking',
         'Best Customer Support',
-    ];
-    const location = [
-        'Tokyo',
-        'Okohoma',
-        'Kioto',
-        'Sapporo',
-        'Osaka',
-        'Fukuokai',
     ];
 
     return (
@@ -121,7 +112,7 @@ const HomePage = () => {
                 </div>
             </div>
 
-            <Footer location={location} />
+            {/* <Footer location={location} /> */}
         </>
     );
 };
