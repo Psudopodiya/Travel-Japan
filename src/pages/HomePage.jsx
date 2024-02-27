@@ -1,14 +1,18 @@
 import './homepage.css';
 
-import PlaceIcon from '@mui/icons-material/Place';
+import { ArrowForward } from '@mui/icons-material';
 
-import pathMap from '../assets/pathMap.svg';
-import GuideIcon from '../components/Icons/GuideIcon';
+import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
-import { WeatherComponent } from '../components/UI/WeatherComponent';
+import CardList from '../components/UI/CardList';
 
 const HomePage = () => {
-    const dates = [10, 14, 18, 23, 26, 30];
+    const plans = [
+        'Varioud Destinations',
+        'Best Tour Guide',
+        'Easy Booking',
+        'Best Customer Support',
+    ];
     const location = [
         'Tokyo',
         'Okohoma',
@@ -20,139 +24,104 @@ const HomePage = () => {
 
     return (
         <>
-            <div className="homepage-header">
+            <div className="base font-Manrope">
                 <Navbar />
-                <div className="mx-[40%] mt-[15%] font-Enriqueta text-4xl tracking-[.7em] text-white">
-                    JAPAN
+                <div className="mt-32 flex gap-4 px-40">
+                    <div className="max-w-sm text-8xl text-white">
+                        Unleash And Live your Travel Dreams
+                    </div>
+                    <div className="mt-32 flex flex-col gap-y-10">
+                        <div className="text-xl">
+                            Lorem ipsum dolor sit, amet consectetur adipisicing
+                            elit. Voluptate tempore eligendi placeat earum.
+                            Earum nostrum labore praesentium eligendi excepturi
+                            blanditiis.
+                        </div>
+                        <button className="w-fit rounded-md bg-[#009ECA] px-4 py-2 text-white">
+                            Plan your Trip
+                        </button>
+                    </div>
                 </div>
-                <WeatherComponent />
+                {/* <WeatherComponent /> */}
             </div>
 
-            <div className="homepage-planner w-full px-40 pt-12 font-ZCOOL text-xl">
-                <div>CHOOSE YOUR UNFORGETABLE JOURNEY</div>
-                <div className="mt-7 flex">
-                    <div className="w-2/5">
-                        <div className="relative inline-block">
-                            <img src={pathMap} alt="map" />
-                            <button
-                                className="absolute flex"
-                                style={{ top: '20px', left: '45px' }}
-                            >
-                                <PlaceIcon />
-                                <div className="text-sm">Tokyo</div>
-                            </button>
-                            <button
-                                className="absolute flex"
-                                style={{ top: '120px', left: '260px' }}
-                            >
-                                <PlaceIcon />
-                                <div className="text-sm">Okohoma</div>
-                            </button>
-                            <button
-                                className="absolute flex"
-                                style={{ top: '220px', left: '140px' }}
-                            >
-                                <PlaceIcon />
-                                <div className="text-sm">Kioto</div>
-                            </button>
-                            <button
-                                className="absolute flex"
-                                style={{ top: '340px', left: '40px' }}
-                            >
-                                <PlaceIcon />
-                                <div className="text-sm">Sapporo</div>
-                            </button>
-                            <button
-                                className="absolute flex"
-                                style={{ left: '155px', top: '430px' }}
-                            >
-                                <PlaceIcon />
-                                <div className="text-sm">Osaka</div>
-                            </button>
-                        </div>
-
-                        <div className="mt-5">OUR GUIDES</div>
-                        <div className="mt-5 flex-row space-y-5">
-                            <GuideIcon name="Mary Smith" designation="Guide" />
-                            <GuideIcon
-                                name="Ronny Taylor"
-                                designation="Photographer"
-                            />
-                        </div>
+            <div className="flex h-[100vh] gap-48 bg-[#E3F0FF] px-40 py-28 font-Manrope">
+                <div className="suitcase h-[500px] w-[400px] rounded-md"></div>
+                <div className="mt-8 flex flex-col gap-4">
+                    <div className="max-w-2xl text-4xl font-light tracking-wider">
+                        Discover India Proudly with Triplifly, Enjoy your
+                        Journey
                     </div>
-                    <div className="ml-36 w-3/5 text-lg">
-                        <div>ADVENTURE TRAVEL</div>
-                        <div className="mt-5 text-base">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing
-                            elit. Commodi dolore dolor ea ad minus quis
-                            consequatur id vero qui. Error quis consequuntur
-                            odio, libero nam omnis incidunt accusantium
-                            voluptate amet ut, non corrupti molestiae accusamus,
-                            nesciunt ipsum. Doloribus quam consequatur
-                            voluptates, libero magni, tempora ex nihil,
-                            architecto necessitatibus nisi quia placeat
-                            distinctio ipsa maiores neque repudiandae dolorem!
-                            Nisi cumque minus quis similique quisquam cum
-                            laudantium, voluptates ab soluta dolores eaque quo
-                            vel autem culpa hic in ad. Amet sequi vero porro
-                            minus et eveniet modi debitis architecto dicta
-                            laborum eos, quaerat temporibus optio unde eaque
-                            vitae dolore, quae reiciendis corrupti.
+                    <div className="mt-4 max-w-md text-sm">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Odio veritatis totam asperiores expedita exercitationem
+                        laboriosam tenetur! At ut distinctio deleniti?
+                    </div>
+                    <button className="animated-word mt-6 rounded-sm px-6 py-2">
+                        About Us
+                    </button>
+                    <div className="mt-6 flex gap-12">
+                        <div className="flex flex-col font-light">
+                            <div className="text-[52px]">12+</div>
+                            <div>Years of Excellence</div>
                         </div>
-                        <div className="mt-4 max-w-fit border-[1px] border-transparent transition duration-700 ease-in-out hover:border-[1px] hover:border-b-red-600">
-                            Learn More
+                        <div className="flex flex-col font-light">
+                            <div className="text-[52px]">40K+</div>
+                            <div>Happy Customers</div>
                         </div>
-
-                        <div className="h-72 rounded-sm py-5 shadow-sm">
-                            <iframe
-                                className="h-72 w-full"
-                                src="https://www.youtube.com/embed/F0AT_7uVbeo"
-                                title="YouTube video player"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowFullScreen
-                            >
-                                Your browser does not support this link
-                            </iframe>
-                        </div>
-
-                        <div className="mt-10 max-w-fit border-[1px] border-transparent transition duration-700 ease-in-out hover:border-[1px] hover:border-b-red-600">
-                            Book Trip
+                        <div className="flex flex-col font-light">
+                            <div className="text-[52px]">20K+</div>
+                            <div>Successful Packages</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className="homepage-tours my-10 flex h-fit w-full  flex-col items-center  font-ZCOOL  text-white">
-                <div className="mt-6">Unforgetable</div>
-                <div className="mt-5 text-6xl tracking-[.7em] text-red-600">
-                    JAPAN
-                </div>
-                <div className="mt-5 text-wrap">
-                    Tokyo|Okohoma|Kioto|Sapporo|Osaka|Fukuokai
-                </div>
-                <div className="mt-5 max-w-fit border-[1px] border-transparent transition duration-700 ease-in-out hover:border-[1px] hover:border-b-red-600">
-                    Book Trip
-                </div>
+            <div className="flex h-[100vh] gap-48 bg-[#F3F7FC] px-40 py-28 font-Manrope">
+                <div className="mt-8 flex flex-col gap-4">
+                    <div className="max-w-md text-4xl font-light tracking-wider">
+                        We Offer Following Services For You
+                    </div>
+                    <div className="mt-4 max-w-xs text-sm">
+                        Explore our broad range of tailored services
+                        Specifically for you, Taking your Experience beyond
+                        Limit
+                    </div>
 
-                {dates.map((date, index) => {
-                    return (
-                        <div key={index} className="mt-8 flex justify-evenly">
-                            <div className="mr-3 text-6xl">{date}</div>
-                            <div>
-                                <div className="mt-1">April</div>
-                                <div className="mt-1">{location[index]}</div>
-                            </div>
-                        </div>
-                    );
-                })}
-
-                <div className="mt-5 max-w-fit border-[1px] border-transparent transition duration-700 ease-in-out hover:border-[1px] hover:border-b-red-600">
-                    Book Trip
+                    <div className="mt-10 flex flex-col gap-y-3 font-light">
+                        {plans.map((plan, index) => {
+                            return (
+                                <div
+                                    key={index}
+                                    className="flex justify-between border-[1px] border-transparent border-b-gray-300 p-2 transition duration-700 ease-in-out hover:border-[1px] hover:border-b-[#009ECA] hover:text-[#009ECA]"
+                                >
+                                    <p>{plan}</p>
+                                    <ArrowForward
+                                        color="inherit"
+                                        fontSize="small"
+                                    />
+                                </div>
+                            );
+                        })}
+                    </div>
                 </div>
-                <div className="mt-5 max-w-fit border-[1px] border-transparent transition duration-700 ease-in-out hover:border-[1px] hover:border-b-red-600">
-                    Subscribe to be the first to know
+                <div className="suitcase h-[600px] w-[600px] rounded-md"></div>
+            </div>
+
+            <div className="bg-[#00131D] px-40 py-28 font-Manrope font-light text-white">
+                <div className="text-4xl">Special Offers and Deals</div>
+                <div className="mt-8 max-w-sm text-sm">
+                    Find Amazing offers and deals with special discount that you
+                    have been waiting for a long time to experience
+                </div>
+                <div className="relative mt-8 px-0">
+                    <div className="flex flex-nowrap gap-4 overflow-x-auto">
+                        <CardList />
+                    </div>
                 </div>
             </div>
+
+            <Footer location={location} />
         </>
     );
 };
