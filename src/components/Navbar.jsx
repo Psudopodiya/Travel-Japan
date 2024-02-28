@@ -1,3 +1,5 @@
+import '../pages/homepage.css';
+
 import SearchIcon from '@mui/icons-material/Search';
 import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
@@ -23,7 +25,7 @@ const Navbar = () => {
     return (
         <div className="relative w-full py-10 font-Manrope text-sm">
             <div className="flex  items-center gap-40 px-40 ">
-                <div>Logo</div>
+                <svg src="../assets/logo.svg" className="size-4" />
 
                 <div className="flex items-center gap-12">
                     <NavbarButton buttonName="Home" />

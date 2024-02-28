@@ -1,6 +1,12 @@
 import './homepage.css';
+import '../assets/images/camping.jpeg';
 
-import { ArrowForward } from '@mui/icons-material';
+import {
+    AccountBalanceWalletOutlined,
+    AddLocationOutlined,
+    ArrowForward,
+    PhotoCameraOutlined,
+} from '@mui/icons-material';
 
 import Navbar from '../components/Navbar';
 import CardList from '../components/UI/CardList';
@@ -105,11 +111,72 @@ const HomePage = () => {
                     Find Amazing offers and deals with special discount that you
                     have been waiting for a long time to experience
                 </div>
-                <div className="relative mt-8 px-0">
-                    <div className="flex flex-nowrap gap-4 overflow-x-auto">
-                        <CardList />
+
+                <CardList />
+            </div>
+
+            <div className=" flex bg-[#F3F7FC] py-28 font-Manrope">
+                <div className="left-0 h-[600px] w-[800px] bg-[#E3F0FF] px-40 py-28">
+                    <div className=" max-w-sm text-4xl font-medium tracking-wider">
+                        Special Offers for Custom Packages
                     </div>
+                    <div className="mt-8 max-w-sm text-sm">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Quisquam iste corrupti debitis earum itaque delectus nam
+                        sequi sed nostrum corporis?
+                    </div>
+
+                    <div className="flex items-center justify-between py-5">
+                        <div className="flex size-36 flex-col items-center justify-center rounded-md bg-[#F3F7FC] shadow-sm ">
+                            <AddLocationOutlined
+                                style={{
+                                    color: '#009ECA',
+                                    height: '50px',
+                                    width: '50px',
+                                }}
+                            />
+                            <div className="mt-2 max-w-xs p-0.5 text-center text-xs">
+                                Custom your tour spots
+                            </div>
+                        </div>
+                        <div className="flex size-36 flex-col items-center justify-center rounded-md bg-[#F3F7FC] shadow-sm ">
+                            <AccountBalanceWalletOutlined
+                                style={{
+                                    color: '#009ECA',
+                                    height: '50px',
+                                    width: '50px',
+                                }}
+                            />
+                            <div className="mt-2 max-w-xs p-0.5 text-center text-xs">
+                                Competative Pricings
+                            </div>
+                        </div>
+                        <div className="flex size-36 flex-col items-center justify-center rounded-md bg-[#F3F7FC] p-4 shadow-sm">
+                            <PhotoCameraOutlined
+                                style={{
+                                    color: '#009ECA',
+                                    height: '50px',
+                                    width: '50px',
+                                }}
+                            />
+                            <div className="mt-2 max-w-xs p-0.5 text-center text-xs">
+                                Free Photography of Selected Place
+                            </div>
+                        </div>
+                    </div>
+
+                    <button className="w-fit rounded-md bg-[#009ECA] px-4 py-2 text-sm text-white">
+                        Plan your Trip
+                    </button>
                 </div>
+                <div
+                    className="mt-[50px] h-[500px] w-[400px] -translate-x-20 rounded-md shadow-sm"
+                    style={{
+                        backgroundImage: `url(${'../assets/images/camping.jpeg'})`,
+                        backgroundPosition: 'center',
+                        backgroundSize: 'cover',
+                    }}
+                ></div>
             </div>
 
             {/* <Footer location={location} /> */}

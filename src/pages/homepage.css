@@ -5,6 +5,9 @@
     height: 100vh;
     position: relative;
 }
+.logo {
+    background-image: url('../assets/images/logo.png');
+}
 
 .suitcase {
     background-image: url('../assets/images/suitcases.jpeg');
