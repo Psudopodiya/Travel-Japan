@@ -9,6 +9,7 @@ import {
 } from '@mui/icons-material';
 
 import Navbar from '../components/Navbar';
+import TourPackages from '../components/TourPackages';
 import CardList from '../components/UI/CardList';
 
 const HomePage = () => {
@@ -169,15 +170,10 @@ const HomePage = () => {
                         Plan your Trip
                     </button>
                 </div>
-                <div
-                    className="mt-[50px] h-[500px] w-[400px] -translate-x-20 rounded-md shadow-sm"
-                    style={{
-                        backgroundImage: `url(${'../assets/images/camping.jpeg'})`,
-                        backgroundPosition: 'center',
-                        backgroundSize: 'cover',
-                    }}
-                ></div>
+                <div className="sunset-safari mt-[50px] h-[450px] w-[400px] -translate-x-20 rounded-md shadow-sm"></div>
             </div>
+
+            <TourPackages />
 
             {/* <Footer location={location} /> */}
         </>
