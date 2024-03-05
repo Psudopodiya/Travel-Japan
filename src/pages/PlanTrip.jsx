@@ -1,6 +1,5 @@
 import './plantrip.css';
 
-import SearchIcon from '@mui/icons-material/Search';
 import { useState } from 'react';
 
 import data from '../assets/constants/tripData';
@@ -44,9 +43,6 @@ const PlanTrip = () => {
                                 );
                             })}
                         </select>
-                        <button type="submit">
-                            <SearchIcon style={{ color: '#009ECA' }} />
-                        </button>
                     </form>
                 </div>
                 <div className="bg-[#E3F0FF]"></div>

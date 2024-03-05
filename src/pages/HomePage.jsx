@@ -40,7 +40,6 @@ const HomePage = () => {
                         </button>
                     </div>
                 </div>
-                {/* <WeatherComponent /> */}
             </div>
 
             <div className="flex h-[100vh] gap-48 bg-[#E3F0FF] px-40 py-28 font-Manrope">
