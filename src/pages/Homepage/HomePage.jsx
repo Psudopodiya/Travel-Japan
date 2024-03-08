@@ -1,16 +1,14 @@
 import './homepage.css';
-import '../assets/images/camping.jpeg';
 
 import {
-    AccountBalanceWalletOutlined,
-    AddLocationOutlined,
+    //     AccountBalanceWalletOutlined,
+    //     AddLocationOutlined,
     ArrowForward,
-    PhotoCameraOutlined,
+    //     PhotoCameraOutlined,
 } from '@mui/icons-material';
-
-import Navbar from '../components/Navbar';
-import TourPackages from '../components/TourPackages';
-import CardList from '../components/UI/CardList';
+import Navbar from 'src/components/Navbar';
+// import TourPackages from 'src/components/TourPackages';
+// import CardList from 'src/components/UI/CardList';
 
 const HomePage = () => {
     const plans = [
@@ -24,52 +22,69 @@ const HomePage = () => {
         <>
             <div className="base font-Manrope">
                 <Navbar />
-                <div className="mt-32 flex gap-4 px-40">
-                    <div className="max-w-sm text-8xl text-white">
+                <div className="mt-12 flex flex-col gap-4 px-5 md:mt-32 md:px-40">
+                    <div className="max-w-xl text-5xl text-white md:text-6xl">
                         Unleash And Live your Travel Dreams
                     </div>
-                    <div className="mt-32 flex flex-col gap-y-10">
-                        <div className="text-xl">
+                    <div className="mt-12 flex flex-col gap-y-10">
+                        <div className="max-w-xl text-sm text-white md:text-base">
                             Lorem ipsum dolor sit, amet consectetur adipisicing
                             elit. Voluptate tempore eligendi placeat earum.
                             Earum nostrum labore praesentium eligendi excepturi
                             blanditiis.
                         </div>
-                        <button className="w-fit rounded-md bg-[#009ECA] px-4 py-2 text-white">
+                        <button className="w-fit rounded-md bg-[#009ECA] px-4 py-2 text-sm text-white md:text-base">
                             Plan your Trip
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div className="flex h-[100vh] gap-48 bg-[#E3F0FF] px-40 py-28 font-Manrope">
-                <div className="suitcase h-[500px] w-[400px] rounded-md"></div>
-                <div className="mt-8 flex flex-col gap-4">
-                    <div className="max-w-2xl text-4xl font-light tracking-wider">
-                        Discover India Proudly with Triplifly, Enjoy your
-                        Journey
+            <div className="h-[100vh] bg-[#E3F0FF] px-5 py-28 font-Manrope  md:px-40">
+                <div className="flex gap-10  md:gap-48">
+                    <div className="suitcase h-[400px] w-[350px] rounded-md md:h-[500px] md:w-[400px]"></div>
+                    <div className="mt-3 flex flex-col gap-4 md:mt-8">
+                        <div className="max-w-lg text-2xl font-light tracking-wider md:max-w-2xl md:text-4xl">
+                            Discover India Proudly with Triplifly, Enjoy your
+                            Journey
+                        </div>
+                        <div className="mt-2 max-w-sm text-xs md:mt-4 md:max-w-md md:text-sm">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Odio veritatis totam asperiores expedita
+                            exercitationem laboriosam tenetur! At ut distinctio
+                            deleniti?
+                        </div>
+                        <button className="animated-word ml-2 mt-6 rounded-sm py-2 text-sm md:px-6">
+                            About Us
+                        </button>
+                        <div className="mt-6 hidden gap-12 md:flex">
+                            <div className="flex flex-col font-light">
+                                <div className="text-[52px]">12+</div>
+                                <div>Years of Excellence</div>
+                            </div>
+                            <div className="flex flex-col font-light">
+                                <div className="text-[52px]">40K+</div>
+                                <div>Happy Customers</div>
+                            </div>
+                            <div className="flex flex-col font-light">
+                                <div className="text-[52px]">20K+</div>
+                                <div>Successful Packages</div>
+                            </div>
+                        </div>
                     </div>
-                    <div className="mt-4 max-w-md text-sm">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Odio veritatis totam asperiores expedita exercitationem
-                        laboriosam tenetur! At ut distinctio deleniti?
+                </div>
+                <div className="ml-5 mt-6 flex gap-6 md:hidden">
+                    <div className="flex flex-col font-light">
+                        <div className="text-3xl">12+</div>
+                        <div className="text-sm">Years of Excellence</div>
                     </div>
-                    <button className="animated-word mt-6 rounded-sm px-6 py-2">
-                        About Us
-                    </button>
-                    <div className="mt-6 flex gap-12">
-                        <div className="flex flex-col font-light">
-                            <div className="text-[52px]">12+</div>
-                            <div>Years of Excellence</div>
-                        </div>
-                        <div className="flex flex-col font-light">
-                            <div className="text-[52px]">40K+</div>
-                            <div>Happy Customers</div>
-                        </div>
-                        <div className="flex flex-col font-light">
-                            <div className="text-[52px]">20K+</div>
-                            <div>Successful Packages</div>
-                        </div>
+                    <div className="flex flex-col font-light">
+                        <div className="text-3xl">40K+</div>
+                        <div className="text-sm">Happy Customers</div>
+                    </div>
+                    <div className="flex flex-col font-light">
+                        <div className="text-3xl">20K+</div>
+                        <div className="text-sm">Successful Packages</div>
                     </div>
                 </div>
             </div>
@@ -105,7 +120,7 @@ const HomePage = () => {
                 <div className="suitcase h-[600px] w-[600px] rounded-md"></div>
             </div>
 
-            <div className="bg-[#00131D] px-40 py-28 font-Manrope font-light text-white">
+            {/* <div className="bg-[#00131D] px-40 py-28 font-Manrope font-light text-white">
                 <div className="text-4xl">Special Offers and Deals</div>
                 <div className="mt-8 max-w-sm text-sm">
                     Find Amazing offers and deals with special discount that you
@@ -113,9 +128,9 @@ const HomePage = () => {
                 </div>
 
                 <CardList />
-            </div>
+            </div> */}
 
-            <div className=" flex bg-[#F3F7FC] py-28 font-Manrope">
+            {/* <div className=" flex bg-[#F3F7FC] py-28 font-Manrope">
                 <div className="left-0 h-[600px] w-[800px] bg-[#E3F0FF] px-40 py-28">
                     <div className=" max-w-sm text-4xl font-medium tracking-wider">
                         Special Offers for Custom Packages
@@ -170,9 +185,9 @@ const HomePage = () => {
                     </button>
                 </div>
                 <div className="sunset-safari mt-[50px] h-[450px] w-[400px] -translate-x-20 rounded-md shadow-sm"></div>
-            </div>
+            </div> */}
 
-            <TourPackages />
+            {/* <TourPackages /> */}
 
             {/* <Footer location={location} /> */}
         </>

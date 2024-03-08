@@ -1,22 +1,22 @@
 .base {
-    background-image: url('../assets/images/lute-Rw-8nR8ZSuE-unsplash.jpg');
+    background-image: url('src/assets/images/lute-Rw-8nR8ZSuE-unsplash.jpg');
     background-position: center;
     background-size: cover;
     height: 100vh;
     position: relative;
 }
 .logo {
-    background-image: url('../assets/images/logo.png');
+    background-image: url('src/assets/images/logo.png');
 }
 
 .suitcase {
-    background-image: url('../assets/images/suitcases.jpeg');
+    background-image: url('src/assets/images/suitcases.jpeg');
     background-position: center;
     background-size: cover;
 }
 
 .japan-night {
-    background-image: url('../assets/images/japanNight.jpg');
+    background-image: url('src/assets/images/japanNight.jpg');
     background-position: center;
     background-size: cover;
     height: fit-content;
@@ -24,29 +24,29 @@
 }
 
 .sunset-safari {
-    background-image: url('../assets/images/camping.jpeg');
+    background-image: url('src/assets/images/camping.jpeg');
     background-position: center;
     background-size: cover;
 }
 .mountain-retreats {
-    background-image: url('../assets/images/jeep.jpeg');
+    background-image: url('src/assets/images/jeep.jpeg');
     background-position: center;
     background-size: cover;
 }
 .island-hopping {
-    background-image: url('../assets/images/skylines.jpeg');
+    background-image: url('src/assets/images/skylines.jpeg');
     background-position: center;
     background-size: cover;
 }
 .city-lights {
-    background-image: url('../assets/images/japanNight.jpg');
+    background-image: url('src/assets/images/japanNight.jpg');
     background-position: center;
     background-size: cover;
 }
 
 .animated-word {
     cursor: pointer;
-    font-size: 1rem;
+    /* font-size: 1rem; */
     max-width: fit-content;
     width: 100%;
     outline: 1px solid;

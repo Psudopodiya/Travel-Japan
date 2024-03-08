@@ -1,8 +1,7 @@
 import ArrowCircleLeftIcons from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import { useState } from 'react';
-
-import CardList from '../components/UI/CardList';
+import CardList from 'src/components/UI/CardList';
 
 const TourPackages = () => {
     const [scrollX, setScrollX] = useState(0);

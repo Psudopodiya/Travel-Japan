@@ -1,61 +1,56 @@
-import '../pages/homepage.css';
-
-import SearchIcon from '@mui/icons-material/Search';
-import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton';
-import { useEffect, useRef, useState } from 'react';
+import MenuIcon from '@mui/icons-material/Menu';
+import { useState } from 'react';
 
 import NavbarButton from './Buttons/NavbarButtons';
+import Logo from './Icons/Logo';
 
 const Navbar = () => {
-    const [searchActive, setSearchActive] = useState(false);
-
-    const searchInputRef = useRef(null);
-
-    useEffect(() => {
-        if (searchActive) {
-            searchInputRef.current?.focus();
-        }
-    }, [searchActive]);
-
-    const searchBarClass = searchActive
-        ? 'opacity-100 visible'
-        : 'opacity-0 invisible';
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <div className="relative w-full py-10 font-Manrope text-sm">
-            <div className="flex  items-center gap-40 px-40 ">
-                <svg src="../assets/logo.svg" className="size-4" />
-
-                <div className="flex items-center gap-12">
+        <nav className="w-full py-10 font-Manrope text-sm">
+            <div className="flex items-center gap-32">
+                <div className="ml-5 md:ml-40">
+                    <Logo />
+                </div>
+                <div className="hidden items-center gap-10 md:flex">
                     <NavbarButton buttonName="Home" />
                     <NavbarButton buttonName="Plan Your Trip" />
                     <NavbarButton buttonName="Top Destinations" />
                     <NavbarButton buttonName="Gallery" />
                     <NavbarButton buttonName="About Us" />
                     <NavbarButton buttonName="Contacts" />
-                    <IconButton
-                        onClick={() => setSearchActive(!searchActive)}
-                        aria-label="Search"
-                    >
-                        <SearchIcon style={{ color: '#009ECA' }} />
-                    </IconButton>
-                    <Avatar style={{ background: 'transparent' }} />
                 </div>
-
-                <div
-                    className={`absolute inset-0 z-50 flex items-center justify-center transition-opacity duration-500 ${searchBarClass}`}
-                >
-                    <input
-                        ref={searchInputRef}
-                        type="text"
-                        placeholder="Search..."
-                        className="z-0 h-10 w-3/4 rounded-lg pl-4 pr-10 focus:shadow focus:outline-none md:w-1/2 lg:w-1/3"
-                        onBlur={() => setSearchActive(false)}
-                    />
+                <div className="flex flex-col items-center md:hidden">
+                    <button
+                        className="mobile-menu-button"
+                        onClick={() => setIsOpen(!isOpen)}
+                    >
+                        <MenuIcon />
+                    </button>
                 </div>
             </div>
-        </div>
+            {/* drawer */}
+            <div
+                className={`fixed right-0 top-0 z-40 h-full w-[60vw] bg-gray-900 py-20 duration-300 ease-in-out ${isOpen ? 'translate-x-0' : 'translate-x-full'}`}
+            >
+                <div className="flex flex-col items-center gap-10">
+                    <NavbarButton buttonName="Plan Your Trip" />
+                    <NavbarButton buttonName="Top Destinations" />
+                    <NavbarButton buttonName="Gallery" />
+                    <NavbarButton buttonName="About Us" />
+                    <NavbarButton buttonName="Contacts" />
+                </div>
+            </div>
+
+            {/* Overlay */}
+            {isOpen && (
+                <div
+                    className="fixed inset-0 z-30 bg-black opacity-50"
+                    onClick={() => setIsOpen(false)}
+                ></div>
+            )}
+        </nav>
     );
 };
 
