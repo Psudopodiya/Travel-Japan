@@ -1,15 +1,15 @@
 import './homepage.css';
 
 import {
-    //     AccountBalanceWalletOutlined,
-    //     AddLocationOutlined,
+    AccountBalanceWalletOutlined,
+    AddLocationOutlined,
     ArrowForward,
-    //     PhotoCameraOutlined,
+    PhotoCameraOutlined,
 } from '@mui/icons-material';
+// import Footer from 'src/components/Footer';
 import Navbar from 'src/components/Navbar';
-// import TourPackages from 'src/components/TourPackages';
-// import CardList from 'src/components/UI/CardList';
-
+import TourPackages from 'src/components/TourPackages';
+import CardList from 'src/components/UI/CardList';
 const HomePage = () => {
     const plans = [
         'Varioud Destinations',
@@ -120,7 +120,7 @@ const HomePage = () => {
                 <div className="suitcase h-[600px] w-[600px] rounded-md"></div>
             </div>
 
-            {/* <div className="bg-[#00131D] px-40 py-28 font-Manrope font-light text-white">
+            <div className="bg-[#00131D] px-40 py-28 font-Manrope font-light text-white">
                 <div className="text-4xl">Special Offers and Deals</div>
                 <div className="mt-8 max-w-sm text-sm">
                     Find Amazing offers and deals with special discount that you
@@ -128,9 +128,9 @@ const HomePage = () => {
                 </div>
 
                 <CardList />
-            </div> */}
+            </div>
 
-            {/* <div className=" flex bg-[#F3F7FC] py-28 font-Manrope">
+            <div className=" flex bg-[#F3F7FC] py-28 font-Manrope">
                 <div className="left-0 h-[600px] w-[800px] bg-[#E3F0FF] px-40 py-28">
                     <div className=" max-w-sm text-4xl font-medium tracking-wider">
                         Special Offers for Custom Packages
@@ -185,9 +185,9 @@ const HomePage = () => {
                     </button>
                 </div>
                 <div className="sunset-safari mt-[50px] h-[450px] w-[400px] -translate-x-20 rounded-md shadow-sm"></div>
-            </div> */}
+            </div>
 
-            {/* <TourPackages /> */}
+            <TourPackages />
 
             {/* <Footer location={location} /> */}
         </>

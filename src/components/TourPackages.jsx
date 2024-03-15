@@ -1,7 +1,8 @@
 import ArrowCircleLeftIcons from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
+import PlaceIcon from '@mui/icons-material/Place';
 import { useState } from 'react';
-import CardList from 'src/components/UI/CardList';
+import travelDestinations from 'src/assets/constants/travelDestinations';
 
 const TourPackages = () => {
     const [scrollX, setScrollX] = useState(0);
@@ -47,10 +48,42 @@ const TourPackages = () => {
             </div>
             <div>
                 <div
-                    className="transition-transform duration-500"
+                    className="mt-3 flex gap-5 transition-transform duration-500"
                     style={{ transform: `translateX(${scrollX}px)` }}
                 >
-                    <CardList /> {/* This should render your cards */}
+                    {travelDestinations.map((destination, index) => {
+                        return (
+                            <div
+                                key={index}
+                                className="item flex h-[400px] min-w-[300px] flex-col justify-end rounded-md px-4 py-8"
+                                style={{
+                                    backgroundImage: `url(${destination.imageUrl})`,
+                                    backgroundSize: 'cover',
+                                    backgroundPosition: 'center',
+                                }}
+                            >
+                                <div className="flex min-h-32 flex-col gap-3 rounded-md bg-white bg-opacity-70 p-3">
+                                    <div className="flex gap-1">
+                                        <PlaceIcon
+                                            style={{
+                                                color: '#009ECA',
+                                                height: '18px',
+                                            }}
+                                        />
+                                        <div className="text-sm ">
+                                            {destination.placeName},
+                                        </div>
+                                        <div className="text-sm ">
+                                            {destination.country}
+                                        </div>
+                                    </div>
+                                    <div className="max-w-sm px-2 text-sm ">
+                                        {destination.description}
+                                    </div>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </div>
